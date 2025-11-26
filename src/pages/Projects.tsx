@@ -6,58 +6,67 @@ import { Button } from "@/components/ui/button";
 const projects = [
   {
     id: 1,
-    title: "Sentiment Analysis Dashboard",
-    description: "ML-powered sentiment analysis tool for social media data using NLP and Python.",
-    tags: ["Python", "TensorFlow", "NLP", "Pandas"],
-    category: "data-science" as const,
-    githubUrl: "#",
-    liveUrl: "#",
+    title: "TrustHub",
+    description: "A unified banking hub built during the Wema Bank hackathon. It combined multiple banking features into a single streamlined app, improving navigation, account management, and overall user experience.",
+    tags: ["Fintech", "Hackathon", "UI/UX", "Mobile App"],
+    category: "frontend",
+    liveUrl: "https://trusthub-six.vercel.app",
+    githubUrl: "https://github.com/Mckings1/wemaBank-hackathon-team3"
   },
   {
     id: 2,
-    title: "E-Commerce Platform",
-    description: "Full-featured online store built with React, Redux, and Firebase.",
-    tags: ["React", "Redux", "Firebase", "Tailwind"],
-    category: "frontend" as const,
-    githubUrl: "#",
-    liveUrl: "#",
+    title: "Hackathon Project – Azure AI Platform",
+    description: "Full AI platform built during a hackathon using Semantic Kernel, Azure OpenAI, Azure Functions and Static Web Apps. Features intelligent task automation and content workflows.",
+    tags: ["Azure", "Semantic Kernel", "OpenAI", "Functions"],
+    category: "frontend",
+    liveUrl: "https://hackathon-g8.netlify.app",
+    githubUrl: "https://github.com/Mckings1/hackathon"
   },
   {
     id: 3,
-    title: "Customer Churn Prediction",
-    description: "Predictive model to identify customers likely to churn using Azure ML.",
-    tags: ["Azure ML", "Python", "Scikit-learn"],
-    category: "data-science" as const,
-    githubUrl: "#",
+    title: "Meta Model Dashboard",
+    description: "Internal analytics dashboard built with React, Vite and shadcn. Designed for tracking AI model activity, performance and governance metrics.",
+    tags: ["React", "Vite", "TypeScript", "shadcn"],
+    category: "frontend",
+    githubUrl: "https://github.com/Mckings1/meta-model-dashboard"
   },
   {
     id: 4,
-    title: "Task Management App",
-    description: "Modern task manager with drag-and-drop, real-time updates, and team collaboration.",
-    tags: ["React", "TypeScript", "Supabase"],
-    category: "frontend" as const,
-    githubUrl: "#",
-    liveUrl: "#",
+    title: "Research AI Assisted Azure ",
+    description: "A modern frontend deployed on Azure Static Web Apps for an end to end KYC automation system with AI assisted workflows.",
+    tags: ["React", "Azure", "Static Web Apps"],
+    category: "frontend",
+    liveUrl: "https://red-moss-043776110.3.azurestaticapps.net",
+    githubUrl: "https://github.com/Mckings1/kyc-frontend"
   },
   {
     id: 5,
-    title: "Image Classification API",
-    description: "REST API for image classification using pre-trained CNN models.",
-    tags: ["Python", "FastAPI", "PyTorch", "Docker"],
-    category: "data-science" as const,
-    githubUrl: "#",
-    liveUrl: "#",
+    title: "Local Fund Transfer Automation (ProcessMaker)",
+    description: "A full BPM workflow for local funds transfer integrating routing, email notifications and approval process. Built for GTBank ProcessMaker.",
+    tags: ["ProcessMaker", "BPM", "Automation"],
+    category: "data-science",
+    githubUrl: "#"
   },
   {
     id: 6,
-    title: "Portfolio CMS",
-    description: "Content management system for portfolios with headless CMS integration.",
-    tags: ["Next.js", "Strapi", "GraphQL"],
-    category: "frontend" as const,
+    title: "Image Scraping Automation with n8n",
+    description: "Automated image scraping pipeline storing assets in Teable DB with UI validation workflow. Includes error handling and scheduled automation.",
+    tags: ["n8n", "Automation", "Teable", "Scraping"],
+    category: "data-science",
+    githubUrl: "https://github.com/Mckings1/n8n-image-scraper"
+  },
+
+  {
+    id: 7,
+    title: "Real Estate Automation",
+    description: "AI-agent automation system for real estate workflows using n8n and Teable. Automates lead management, notifications, and API integrations for smooth operations.",
+    tags: ["n8n", "Teable", "JavaScript", "REST APIs"],
+    category: "frontend",
     githubUrl: "#",
-    liveUrl: "#",
+    liveUrl: "https://www.youtube.com/watch?v=0mvF2KmOuaU&feature=youtu.be"
   },
 ];
+
 
 export default function Projects() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -89,7 +98,7 @@ export default function Projects() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">My Projects</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A collection of my work spanning front-end development and data science projects.
+            A collection of my work spanning front-end development, automation, and data science projects.
           </p>
         </div>
 
