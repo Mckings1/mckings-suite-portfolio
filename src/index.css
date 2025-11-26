@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 13% 18%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+    
+    --primary: 220 13% 28%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 220 13% 38%;
+    
+    --secondary: 220 13% 95%;
+    --secondary-foreground: 220 13% 18%;
+    
+    --muted: 220 13% 95%;
+    --muted-foreground: 220 9% 46%;
+    
+    --accent: 220 13% 91%;
+    --accent-foreground: 220 13% 18%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 220 13% 28%;
+    
+    --radius: 0.5rem;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(220 13% 28%), hsl(220 13% 38%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 13% 98%));
+    --shadow-elegant: 0 10px 30px -10px hsl(220 13% 28% / 0.15);
+    --shadow-glow: 0 0 40px hsl(220 13% 38% / 0.2);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 220 13% 12%;
+    --foreground: 220 13% 95%;
+    
+    --card: 220 13% 16%;
+    --card-foreground: 220 13% 95%;
+    
+    --popover: 220 13% 16%;
+    --popover-foreground: 220 13% 95%;
+    
+    --primary: 220 13% 75%;
+    --primary-foreground: 220 13% 12%;
+    --primary-glow: 220 13% 85%;
+    
+    --secondary: 220 13% 20%;
+    --secondary-foreground: 220 13% 95%;
+    
+    --muted: 220 13% 20%;
+    --muted-foreground: 220 9% 65%;
+    
+    --accent: 220 13% 24%;
+    --accent-foreground: 220 13% 95%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 13% 95%;
+    
+    --border: 220 13% 24%;
+    --input: 220 13% 24%;
+    --ring: 220 13% 75%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(220 13% 75%), hsl(220 13% 85%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 13% 12%), hsl(220 13% 16%));
+    --shadow-elegant: 0 10px 30px -10px hsl(220 13% 75% / 0.2);
+    --shadow-glow: 0 0 40px hsl(220 13% 85% / 0.25);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .font-sans {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'Fira Code', monospace;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+  
+  .glass-card {
+    @apply bg-card/50 backdrop-blur-lg border border-border/50;
+  }
+  
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elegant);
+  }
+}
