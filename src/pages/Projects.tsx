@@ -41,23 +41,6 @@ const projects = [
   },
   {
     id: 5,
-    title: "Local Fund Transfer Automation (ProcessMaker)",
-    description: "A full BPM workflow for local funds transfer integrating routing, email notifications and approval process. Built for GTBank ProcessMaker.",
-    tags: ["ProcessMaker", "BPM", "Automation"],
-    category: "data-science",
-    githubUrl: "#"
-  },
-  {
-    id: 6,
-    title: "Image Scraping Automation with n8n",
-    description: "Automated image scraping pipeline storing assets in Teable DB with UI validation workflow. Includes error handling and scheduled automation.",
-    tags: ["n8n", "Automation", "Teable", "Scraping"],
-    category: "data-science",
-    githubUrl: "https://github.com/Mckings1/n8n-image-scraper"
-  },
-
-  {
-    id: 7,
     title: "Real Estate Automation",
     description: "AI-agent automation system for real estate workflows using n8n and Teable. Automates lead management, notifications, and API integrations for smooth operations.",
     tags: ["n8n", "Teable", "JavaScript", "REST APIs"],
@@ -65,6 +48,23 @@ const projects = [
     githubUrl: "#",
     liveUrl: "https://www.youtube.com/watch?v=0mvF2KmOuaU&feature=youtu.be"
   },
+  {
+    id: 6,
+    title: "Local Fund Transfer Automation (ProcessMaker)",
+    description: "A full BPM workflow for local funds transfer integrating routing, email notifications and approval process. Built for GTBank ProcessMaker.",
+    tags: ["ProcessMaker", "BPM", "Automation"],
+    category: "frontend",
+    githubUrl: "#"
+  },
+  {
+    id: 7,
+    title: "Image Scraping Automation with n8n",
+    description: "Automated image scraping pipeline storing assets in Teable DB with UI validation workflow. Includes error handling and scheduled automation.",
+    tags: ["n8n", "Automation", "Teable", "Scraping"],
+    category: "data-science",
+    githubUrl: "https://github.com/Mckings1/n8n-image-scraper"
+  },
+
 ];
 
 
@@ -116,7 +116,7 @@ export default function Projects() {
             onClick={() => handleFilterChange("frontend")}
             className="hover-lift"
           >
-            Front-End
+            Front-End/Automation
           </Button>
           <Button
             variant={filter === "data-science" ? "default" : "outline"}

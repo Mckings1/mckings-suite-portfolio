@@ -79,11 +79,11 @@ const certifications = [
 
 export default function Certifications() {
   return (
-    <div className="min-h-screen py-12 px-4 bg-gray-50">
+    <div className="min-h-screen py-12 px-4 ">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Certifications</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className=" max-w-2xl mx-auto">
             Professional certifications demonstrating expertise in web development, 
             data science, cloud technologies, and AI.
           </p>
