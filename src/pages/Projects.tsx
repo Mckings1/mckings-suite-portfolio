@@ -4,6 +4,16 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { Button } from "@/components/ui/button";
 
 const projects = [
+ 
+  {
+    id: 0,
+    title: "Research AI Assisted-RAG System",
+    description: "A modern frontend deployed on Azure Static Web Apps. Privacy-first Retrieval-Augmented Generation (RAG) system designed to learn from your own documents, URLs, and policies.",
+    tags: ["React", "Azure", "Static Web Apps"],
+    category: "frontend",
+    liveUrl: "https://red-moss-043776110.3.azurestaticapps.net",
+    githubUrl: "https://github.com/Mckings1/ragknowledge"
+  },
   {
     id: 1,
     title: "TrustHub",
@@ -31,15 +41,6 @@ const projects = [
     githubUrl: "https://github.com/Mckings1/meta-model-dashboard"
   },
   {
-    id: 4,
-    title: "Research AI Assisted Azure ",
-    description: "A modern frontend deployed on Azure Static Web Apps for an end to end KYC automation system with AI assisted workflows.",
-    tags: ["React", "Azure", "Static Web Apps"],
-    category: "frontend",
-    liveUrl: "https://red-moss-043776110.3.azurestaticapps.net",
-    githubUrl: "https://github.com/Mckings1/kyc-frontend"
-  },
-  {
     id: 5,
     title: "Real Estate Automation",
     description: "AI-agent automation system for real estate workflows using n8n and Teable. Automates lead management, notifications, and API integrations for smooth operations.",
@@ -58,13 +59,103 @@ const projects = [
   },
   {
     id: 7,
-    title: "Image Scraping Automation with n8n",
-    description: "Automated image scraping pipeline storing assets in Teable DB with UI validation workflow. Includes error handling and scheduled automation.",
-    tags: ["n8n", "Automation", "Teable", "Scraping"],
+    title: "IBM Data Science Capstone Project",
+    description: "End-to-end SpaceX launch analysis using API data and web scraping to forecast successful launches, with 95% accurate predictive modeling.",
+    tags: ["Python", "SQL", "Scikit-learn", "Folium", "Plotly Dash"],
     category: "data-science",
-    githubUrl: "https://github.com/Mckings1/n8n-image-scraper"
+    liveUrl: "#",
+    githubUrl: "https://github.com/Mckings1/IBM-DataScience-Capstone-Project"
   },
-
+  {
+    id: 8,
+    title: "Customer Churn Prediction",
+    description: "End-to-end ML pipeline predicting customer churn with feature engineering, model training (XGBoost, Random Forest), and SHAP interpretability for actionable insights.",
+    tags: ["Python", "Scikit-learn", "XGBoost", "SHAP", "Pandas"],
+    category: "data-science",
+    liveUrl: "#",
+    githubUrl: "https://github.com/Mckings1/Customer-Churn-Prediction"
+  },
+  {
+    id: 9,
+    title: "SpaceX Falcon 9 Predictive Analysis & Classification",
+    description: "ML pipeline to predict Falcon 9 first-stage landing success, enabling cost estimation for reusable rocket launches and competitive bidding analysis.",
+    tags: ["Python", "Scikit-learn", "Pandas", "Machine Learning"],
+    category: "data-science",
+    liveUrl: "#",
+    githubUrl: "https://github.com/Mckings1/spacex-falcon9-predictive-analysis-classification"
+  },
+  {
+    id: 10,
+    title: "SpaceX Falcon 9 EDA & Data Visualization",
+    description: "Exploratory data analysis and feature engineering on Falcon 9 launch data to identify patterns for predicting first-stage landing success.",
+    tags: ["Python", "Pandas", "Matplotlib", "Seaborn", "EDA"],
+    category: "data-science",
+    liveUrl: "#",
+    githubUrl: "https://github.com/Mckings1/spaceX-falcon9-EDA-dataVisualization"
+  },
+  {
+    id: 11,
+    title: "House Price Prediction Analysis",
+    description: "Data preprocessing, EDA, and predictive modeling to forecast house prices, uncovering key drivers like location and features with visualizations.",
+    tags: ["Python", "Pandas", "Scikit-learn", "Matplotlib", "Seaborn"],
+    category: "data-science",
+    liveUrl: "#",
+    githubUrl: "https://github.com/Mckings1/Analysis-with-python"
+  },
+  {
+    id: 12,
+    title: "Working with Real-World Datasets",
+    description: "Real-time IoT data pipeline for processing and analyzing environmental/crime datasets, with SQL queries for performance insights and trend detection.",
+    tags: ["Python", "SQL", "Pandas", "IoT Data", "Pipelines"],
+    category: "data-science",
+    liveUrl: "#",
+    githubUrl: "https://github.com/Mckings1/Working-with-real-world-datasets"
+  },
+  {
+    id: 13,
+    title: "Interactive Data Visualization Dashboard",
+    description: "Dynamic dashboard comparing economic trends with line/bar charts, heatmaps, and filters for stakeholder insights and pattern analysis.",
+    tags: ["Python", "Dash", "Plotly", "Pandas"],
+    category: "data-science",
+    liveUrl: "https://data-visualization-with-dash-python.onrender.com/",
+    githubUrl: "https://github.com/Mckings1/data-visualization-with-python"
+  },
+  {
+    id: 14,
+    title: "SpaceX Falcon 9 Plotly Dash Dashboard",
+    description: "Interactive dashboard with dropdowns, sliders, pie charts, and scatter plots for analyzing launch site success and payload data.",
+    tags: ["Python", "Plotly Dash", "Interactive Viz"],
+    category: "data-science",
+    liveUrl: "#",
+    githubUrl: "https://github.com/Mckings1/spaceX-falcon9-Ploty-Dash"
+  },
+  {
+    id: 15,
+    title: "SpaceX Falcon 9 Interactive Launch Map",
+    description: "Geospatial analysis of launch site locations using Folium maps to evaluate proximity factors influencing success rates.",
+    tags: ["Python", "Folium", "Geospatial", "Maps"],
+    category: "data-science",
+    liveUrl: "#",
+    githubUrl: "https://github.com/Mckings1/spaceX-falcon9-Interactive-Map-with-Folium"
+  },
+  {
+    id: 16,
+    title: "SpaceX Falcon 9 Wikipedia Web Scraping",
+    description: "Automated scraping of Falcon 9/Falcon Heavy launch records from Wikipedia for historical data collection and analysis.",
+    tags: ["Python", "Web Scraping", "BeautifulSoup"],
+    category: "data-science",
+    liveUrl: "#",
+    githubUrl: "https://github.com/Mckings1/spaceX-falcon9-dc-webScraping"
+  },
+  {
+    id: 17,
+    title: "SpaceX Falcon 9 Data Wrangling",
+    description: "EDA and preprocessing of Falcon 9 landing data to create binary success labels for supervised ML models from outcomes like Ocean/RTLS/ASDS.",
+    tags: ["Python", "Pandas", "Data Cleaning", "EDA"],
+    category: "data-science",
+    liveUrl: "#",
+    githubUrl: "https://github.com/Mckings1/spaceX-falcon9-data-wrangling"
+  }
 ];
 
 

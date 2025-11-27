@@ -40,8 +40,7 @@ export default function Home() {
               </div>
               
               <p className="text-muted-foreground mb-12 animate-fade-in">
-                I automate workflows, analyze complex datasets, and build elegant web interfaces. 
-                Specializing in Python automation, machine learning pipelines, and React applications.
+                I transform complex data into predictive insights, repetitive tasks into intelligent AI-driven automation, and ideas into elegant, high-performance web applications — bridging AI engineering, data science, and modern frontend development.
               </p>
               
               <div className="flex flex-wrap gap-4 justify-center md:justify-start animate-fade-in">
@@ -126,9 +125,9 @@ export default function Home() {
               <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <Code className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Web Development</h3>
+              <h3 className="text-xl font-semibold mb-3">Automation & Front-End</h3>
               <p className="text-muted-foreground mb-4">
-                Creating responsive applications with React and TypeScript. Clean code, intuitive interfaces.
+                Creating responsive applications with React and TypeScript. Clean code, intuitive interfaces. Includes automation to streamline workflows and boost productivity.
               </p>
               <Button variant="link" className="p-0" asChild>
                 <NavLink to="/projects?filter=frontend">
@@ -141,9 +140,9 @@ export default function Home() {
               <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <Database className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Automation & Data Science</h3>
+              <h3 className="text-xl font-semibold mb-3"> Data Science/AI Engineer</h3>
               <p className="text-muted-foreground mb-4">
-                Python-driven automation workflows and ML models. Turning repetitive tasks into scalable solutions.
+                Python-driven analysis of complex datasets to extract actionable insights. Data visualization, predictive modeling and ML models. Includes AI integration for intelligent automation. 
               </p>
               <Button variant="link" className="p-0" asChild>
                 <NavLink to="/projects?filter=data-science">
@@ -164,7 +163,7 @@ export default function Home() {
             Feel free to reach out if you'd like to discuss a project or just say hi!
           </p>
           <Button size="lg" asChild className="hover-lift">
-            <a href="mailto:contact@example.com">Get in Touch</a>
+            <a href="mailto:alabioluwasegun8@gmail.com">Get in Touch</a>
           </Button>
         </div>
       </section>
