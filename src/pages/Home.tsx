@@ -25,11 +25,11 @@ export default function Home() {
                 <span>I'm a </span>
                 <TypeAnimation
                   sequence={[
-                    "Automation Engineer",
+                    "Front-End Engineer",
+                    2000,
+                    "AI Automation Engineer",
                     2000,
                     "Data Scientist",
-                    2000,
-                    "Front-End Engineer",
                     2000,
                   ]}
                   wrapper="span"
