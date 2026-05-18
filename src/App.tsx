@@ -9,6 +9,7 @@ import Home from "@/pages/Home";
 import Projects from "@/pages/Projects";
 import Certifications from "@/pages/Certifications";
 import About from "@/pages/About";
+import { Analytics } from '@vercel/analytics/react';
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
             </Routes>
           </main>
           <Footer />
+          <Analytics />
         </div>
       </BrowserRouter>
     </TooltipProvider>
