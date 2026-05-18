@@ -35,7 +35,7 @@ const projects = [
   {
     title: "Local Fund Transfer Automation",
     description:
-      "Full BPM workflow for local funds transfer integrating routing, email notifications, and an approval process. Built for GTBank on ProcessMaker.",
+      "Full BPM workflow for local funds transfer integrating routing, email notifications, and an approval process. Built for AccessBank on ProcessMaker.",
     tags: ["ProcessMaker", "BPM", "Automation"],
     category: "automation",
     githubUrl: "",

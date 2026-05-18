@@ -7,7 +7,7 @@ const stack = [
   },
   {
     category: "Backend",
-    items: ["Python", "FastAPI", "Node.js", "REST APIs", "PostgreSQL", "Docker", "Azure Functions"],
+    items: ["Node.js", "Python", "FastAPI",  "REST APIs", "PostgreSQL", "MicrosoftSQLServer", "Docker", "Azure Functions"],
   },
   {
     category: "Automation",
@@ -15,7 +15,7 @@ const stack = [
   },
   {
     category: "Frontend & Cloud",
-    items: ["React", "TypeScript", "Tailwind CSS", "Azure", "Vercel", "Supabase", "Firebase"],
+    items: ["JavaScript", "React", "TypeScript", "Tailwind CSS", "Azure", "Vercel", "Supabase", "Firebase"],
   },
 ];
 
@@ -38,7 +38,7 @@ const timeline = [
   {
     year: "2023",
     title: "Backend & Automation",
-    body: "Moved beyond the browser — built Python automation scripts, BPM workflows for GTBank on ProcessMaker, and data pipelines that actually moved the needle.",
+    body: "Moved beyond the browser — built Python automation scripts, BPM workflows for AccessBank on ProcessMaker, and data pipelines that actually moved the needle.",
   },
   {
     year: "2022",
@@ -106,7 +106,7 @@ export default function About() {
             >
               {[
                 { label: "Based in", value: "Lagos, Nigeria" },
-                { label: "Primary stack", value: "FastAPI · Python · Azure" },
+                { label: "Primary stack", value: "Node.js · FastAPI · Python" },
                 { label: "Focus", value: "AI Engineering" },
                 { label: "Experience", value: "4+ years" },
                 { label: "Education", value: "MSc Data Science (upcoming)" },
