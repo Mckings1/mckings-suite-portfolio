@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export function useScrollReveal() {
+export function useScrollReveal(dep?: unknown) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -14,8 +14,11 @@ export function useScrollReveal() {
     );
 
     const elements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
-    elements.forEach((el) => observer.observe(el));
+    elements.forEach((el) => {
+      el.classList.remove("visible");
+      observer.observe(el);
+    });
 
     return () => observer.disconnect();
-  }, []);
+  }, [dep]);
 }

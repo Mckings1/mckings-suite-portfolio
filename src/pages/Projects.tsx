@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ProjectCard } from "@/components/ProjectCard";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
+
 const projects = [
   // ── AI ──
   {
@@ -12,6 +13,7 @@ const projects = [
     category: "ai",
     githubUrl: "https://github.com/Mckings1/ragknowledge",
     liveUrl: "https://red-moss-043776110.3.azurestaticapps.net",
+    image: "/rag.png",
   },
   {
     title: "Azure AI Hackathon Platform",
@@ -21,6 +23,7 @@ const projects = [
     category: "ai",
     githubUrl: "https://github.com/Mckings1/hackathon",
     liveUrl: "https://hackathon-g8.netlify.app",
+    image: "/hackathon.png",
   },
   // ── Automation ──
   {
@@ -31,11 +34,12 @@ const projects = [
     category: "automation",
     githubUrl: "",
     liveUrl: "https://www.youtube.com/watch?v=0mvF2KmOuaU&feature=youtu.be",
+    image: "/realestate.png",
   },
   {
     title: "Local Fund Transfer Automation",
     description:
-      "Full BPM workflow for local funds transfer integrating routing, email notifications, and an approval process. Built for AccessBank on ProcessMaker.",
+      "Full BPM workflow for local funds transfer integrating routing, email notifications, and an approval process. Built for GTBank on ProcessMaker.",
     tags: ["ProcessMaker", "BPM", "Automation"],
     category: "automation",
     githubUrl: "",
@@ -50,6 +54,7 @@ const projects = [
     category: "ml",
     githubUrl: "https://github.com/Mckings1/data-visualization-with-python",
     liveUrl: "https://data-visualization-with-dash-python.onrender.com/",
+    image: "/dataviz.png",
   },
   {
     title: "IBM Data Science Capstone",
@@ -87,16 +92,18 @@ const projects = [
     category: "frontend",
     githubUrl: "https://github.com/Mckings1/wemaBank-hackathon-team3",
     liveUrl: "https://trusthub-six.vercel.app",
+    image: "/trusthub.png",
   },
-  {
-    title: "Meta Model Dashboard",
-    description:
-      "Internal analytics dashboard built with React, Vite and shadcn. Designed for tracking AI model activity, performance, and governance metrics.",
-    tags: ["React", "Vite", "TypeScript", "shadcn"],
-    category: "frontend",
-    githubUrl: "https://github.com/Mckings1/meta-model-dashboard",
-    liveUrl: "",
-  },
+  // {
+  //   title: "Meta Model Dashboard",
+  //   description:
+  //     "Internal analytics dashboard built with React, Vite and shadcn. Designed for tracking AI model activity, performance, and governance metrics.",
+  //   tags: ["React", "Vite", "TypeScript", "shadcn"],
+  //   category: "frontend",
+  //   githubUrl: "https://github.com/Mckings1/meta-model-dashboard",
+  //   liveUrl: "",
+  //   image: "/metamodel.png",
+  // },
   {
     title: "Portfolio v2 (This site)",
     description:
@@ -118,7 +125,7 @@ const filters = [
 
 export default function Projects() {
   const [active, setActive] = useState("all");
-  useScrollReveal();
+  useScrollReveal(active);
 
   const filtered =
     active === "all" ? projects : projects.filter((p) => p.category === active);
