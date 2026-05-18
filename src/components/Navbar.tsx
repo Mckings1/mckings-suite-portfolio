@@ -100,7 +100,9 @@ export function Navbar() {
         >
           <div
             className="py-4 flex flex-col gap-1 border-t"
-            style={{ borderColor: "rgba(201,168,76,0.12)" }}
+            style={{ borderColor: "rgba(201,168,76,0.12)", 
+              background: "rgba(10,10,10,0.98)",  // add this line 
+              }}
           >
             {navLinks.map((link) => (
               <NavLink
