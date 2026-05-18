@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const stats = [
-  { value: "4+", label: "Years Building" },
+  { value: `${Math.floor((Date.now() - new Date("2021-03-01").getTime()) / (1000 * 60 * 60 * 24 * 365))}+`, label: "Years Building" },
   { value: "50+", label: "Projects Shipped" },
   { value: "3", label: "Cloud Platforms" },
   { value: "RAG", label: "Hybrid Systems Built" },
