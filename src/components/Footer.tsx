@@ -1,98 +1,42 @@
-import { Github, Linkedin, Mail, Twitter, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { NavLink } from "@/components/NavLink";
+import { WHATSAPP_URL } from "@/lib/brand";
+
+const links = [
+  { label: "GitHub", href: "https://github.com/Mckings1", icon: Github },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/mckings01", icon: Linkedin },
+  { label: "Email", href: "mailto:alabioluwasegun8@gmail.com", icon: Mail },
+  { label: "WhatsApp", href: WHATSAPP_URL, icon: MessageCircle },
+];
 
 export function Footer() {
-  const socials = [
-    {
-      icon: Github,
-      label: "GitHub",
-      href: "https://github.com/Mckings1",
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/mckings01",
-    },
-    {
-      icon: Twitter,
-      label: "Twitter",
-      href: "https://x.com/mckings_01",
-    },
-    {
-      icon: Mail,
-      label: "Email",
-      href: "mailto:alabioluwasegun8@gmail.com",
-    },
-    {
-      icon: MessageCircle,
-      label: "WhatsApp",
-      href: "https://wa.me/2348107087430",
-    },
-  ];
-
   return (
-    <footer
-      className="relative mt-auto"
-      style={{ borderTop: "1px solid rgba(201,168,76,0.12)" }}
-    >
-      {/* Gold line accent */}
-      <div className="gold-line absolute top-0 left-0 right-0" />
-
-      <div className="container mx-auto px-6 py-12">
-        <div className="flex flex-col items-center gap-8">
-
-          {/* Logo + tagline */}
-          <div className="text-center">
-            <span
-              className="font-display text-2xl font-bold"
-              style={{ color: "var(--gold-400)" }}
-            >
-              <img src="/logo.png" alt="McKings" className="h-20 w-auto" />
-
+    <footer className="border-t border-white/10">
+      <div className="container mx-auto grid max-w-7xl gap-10 px-6 py-10 sm:grid-cols-2 sm:items-end">
+        <div>
+          <NavLink to="/" className="inline-flex items-center" aria-label="McKings home">
+            <span className="flex h-16 w-28 items-center justify-center overflow-hidden" aria-hidden="true">
+              <img src="/logo.png" alt="" loading="lazy" className="h-28 w-28 max-w-none object-contain mix-blend-screen" />
             </span>
-            
-          </div>
-
-          {/* Divider */}
-          <div className="w-24 gold-line" />
-
-          {/* Socials */}
-          <div className="flex items-center gap-6">
-            {socials.map(({ icon: Icon, label, href }) => (
-              <a
-                key={label}
-                href={href}
-              target={href.startsWith("mailto") ? undefined : "_blank"}
-              rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-                aria-label={label}
-                className="group p-2 rounded-full transition-all duration-300"
-                style={{
-                  border: "1px solid rgba(201,168,76,0.15)",
-                  color: "rgba(255,255,255,0.4)",
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.color = "var(--gold-400)";
-                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(201,168,76,0.5)";
-                  (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 0 16px rgba(201,168,76,0.2)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.4)";
-                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(201,168,76,0.15)";
-                  (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
-                }}
-              >
-                <Icon size={17} />
+          </NavLink>
+          <p className="mt-2 text-xs text-white/40">AI & Software Engineer · Lagos, Nigeria</p>
+          <p className="mt-6 text-[11px] text-white/30">© {new Date().getFullYear()} McKings</p>
+        </div>
+        <div className="sm:text-right">
+          <nav className="mb-5 flex flex-wrap gap-x-5 gap-y-3 text-xs sm:justify-end" aria-label="Footer navigation">
+            <NavLink to="/work" className="text-white/45 hover:text-white">Work</NavLink>
+            <NavLink to="/about" className="text-white/45 hover:text-white">About</NavLink>
+            <NavLink to="/research" className="text-white/45 hover:text-white">Research</NavLink>
+            <NavLink to="/certifications" className="text-white/45 hover:text-white">Certifications</NavLink>
+          </nav>
+          <div className="flex gap-2 sm:justify-end">
+            {links.map(({ label, href, icon: Icon }) => (
+              <a key={label} href={href} target={href.startsWith("mailto:") ? undefined : "_blank"} rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"} aria-label={label} className="grid h-10 w-10 place-items-center border border-white/10 text-white/50 transition-colors hover:border-[var(--gold-300)] hover:text-[var(--gold-300)]">
+                <Icon size={16} />
               </a>
             ))}
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="ml-2 inline-flex h-10 items-center gap-2 px-3 text-xs text-[var(--gold-300)] hover:text-white">Let&apos;s connect <ArrowUpRight size={13} /></a>
           </div>
-
-          {/* Bottom line */}
-          <p
-            className="text-xs tracking-wide"
-            style={{ color: "rgba(255,255,255,0.2)" }}
-          >
-            © {new Date().getFullYear()} McKings. Built with intention.
-          </p>
-
         </div>
       </div>
     </footer>

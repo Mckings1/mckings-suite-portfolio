@@ -1,197 +1,60 @@
-import { useState } from "react";
-import { ProjectCard } from "@/components/ProjectCard";
+import { ArrowRight, ArrowUpRight, Github, Workflow } from "lucide-react";
+import { NavLink } from "@/components/NavLink";
+import { caseStudies } from "@/data/caseStudies";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-
-const projects = [
-  // ── AI ──
-  {
-    title: "Research AI Assisted-RAG System",
-    description:
-      "Privacy-first Retrieval-Augmented Generation system designed to learn from your own documents, URLs, and policies. Deployed on Azure Static Web Apps with a modern React frontend.",
-    tags: ["React", "Azure", "RAG", "Static Web Apps"],
-    category: "ai",
-    githubUrl: "https://github.com/Mckings1/ragknowledge",
-    liveUrl: "https://red-moss-043776110.3.azurestaticapps.net",
-    image: "/rag.png",
-  },
-  {
-    title: "Azure AI Hackathon Platform",
-    description:
-      "Full AI platform built during a hackathon using Semantic Kernel, Azure OpenAI, Azure Functions and Static Web Apps. Features intelligent task automation and content workflows.",
-    tags: ["Semantic Kernel", "Azure OpenAI", "Azure Functions", "React"],
-    category: "ai",
-    githubUrl: "https://github.com/Mckings1/hackathon",
-    liveUrl: "https://hackathon-g8.netlify.app",
-    image: "/hackathon.png",
-  },
-  // ── Automation ──
-  {
-    title: "Real Estate AI Agent",
-    description:
-      "AI-agent automation system for real estate workflows using n8n and Teable. Automates lead management, notifications, and API integrations for smooth operations.",
-    tags: ["n8n", "Teable", "JavaScript", "REST APIs"],
-    category: "automation",
-    githubUrl: "",
-    liveUrl: "https://www.youtube.com/watch?v=0mvF2KmOuaU&feature=youtu.be",
-    image: "/realestate.png",
-  },
-  {
-    title: "Local Fund Transfer Automation",
-    description:
-      "Full BPM workflow for local funds transfer integrating routing, email notifications, and an approval process. Built for GTBank on ProcessMaker.",
-    tags: ["ProcessMaker", "BPM", "Automation"],
-    category: "automation",
-    githubUrl: "",
-    liveUrl: "",
-  },
-  // ── ML / Data Science ──
-  {
-    title: "Interactive Data Visualization Dashboard",
-    description:
-      "Dynamic dashboard comparing economic trends with line/bar charts, heatmaps, and filters for stakeholder insights and pattern analysis.",
-    tags: ["Python", "Dash", "Plotly", "Pandas"],
-    category: "ml",
-    githubUrl: "https://github.com/Mckings1/data-visualization-with-python",
-    liveUrl: "https://data-visualization-with-dash-python.onrender.com/",
-    image: "/dataviz.png",
-  },
-  {
-    title: "IBM Data Science Capstone",
-    description:
-      "End-to-end SpaceX launch analysis using API data and web scraping to forecast successful launches, with a predictive model reported at 95% accuracy in the project.",
-    tags: ["Python", "SQL", "Scikit-learn", "Folium", "Plotly Dash"],
-    category: "ml",
-    githubUrl: "https://github.com/Mckings1/IBM-DataScience-Capstone-Project",
-    liveUrl: "",
-  },
-  {
-    title: "Customer Churn Prediction",
-    description:
-      "End-to-end ML pipeline predicting customer churn with feature engineering, model training (XGBoost, Random Forest), and SHAP interpretability for actionable insights.",
-    tags: ["Python", "XGBoost", "SHAP", "Scikit-learn", "Pandas"],
-    category: "ml",
-    githubUrl: "https://github.com/Mckings1/Customer-Churn-Prediction",
-    liveUrl: "",
-  },
-  {
-    title: "House Price Prediction",
-    description:
-      "Data preprocessing, EDA, and predictive modelling to forecast house prices — uncovering key drivers like location and features with clear visualisations.",
-    tags: ["Python", "Pandas", "Scikit-learn", "Matplotlib", "Seaborn"],
-    category: "ml",
-    githubUrl: "https://github.com/Mckings1/Analysis-with-python",
-    liveUrl: "",
-  },
-  // ── Frontend ──
-  {
-    title: "TrustHub",
-    description:
-      "A unified banking hub built during the Wema Bank hackathon. Combined multiple banking features into a single streamlined app, improving navigation, account management, and overall UX.",
-    tags: ["Fintech", "Hackathon", "UI/UX", "Mobile App"],
-    category: "frontend",
-    githubUrl: "https://github.com/Mckings1/wemaBank-hackathon-team3",
-    liveUrl: "https://trusthub-six.vercel.app",
-    image: "/trusthub.png",
-  },
-  // {
-  //   title: "Meta Model Dashboard",
-  //   description:
-  //     "Internal analytics dashboard built with React, Vite and shadcn. Designed for tracking AI model activity, performance, and governance metrics.",
-  //   tags: ["React", "Vite", "TypeScript", "shadcn"],
-  //   category: "frontend",
-  //   githubUrl: "https://github.com/Mckings1/meta-model-dashboard",
-  //   liveUrl: "",
-  //   image: "/metamodel.png",
-  // },
-  {
-    title: "Portfolio v2 (This site)",
-    description:
-      "Redesigned personal portfolio with Sovereign Dark aesthetic, Playfair Display typography, scroll-reveal animations, and a full gold design system.",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-    category: "frontend",
-    githubUrl: "https://github.com/Mckings1",
-    liveUrl: "https://mckings-portfolio.vercel.app",
-  },
-];
-
-const filters = [
-  { label: "All", value: "all" },
-  { label: "AI & RAG", value: "ai" },
-  { label: "ML", value: "ml" },
-  { label: "Automation", value: "automation" },
-  { label: "Frontend", value: "frontend" },
-];
-
 export default function Projects() {
-  const [active, setActive] = useState("all");
-  useScrollReveal(active);
-
-  const filtered =
-    active === "all" ? projects : projects.filter((p) => p.category === active);
+  useScrollReveal();
 
   return (
-    <div className="min-h-screen pt-24 pb-24 px-6">
-      <div className="container mx-auto">
+    <div className="page-shell">
+      <header className="container mx-auto max-w-7xl px-6 pb-14 pt-32 md:pb-20 md:pt-40">
+        <p className="eyebrow">Portfolio / Work</p>
+        <h1 className="page-title">Selected work</h1>
+        <p className="section-lede mt-6">Systems I have designed and engineered across AI, software, data and business process automation.</p>
+      </header>
 
-        {/* Header */}
-        <div className="mb-14 reveal">
-          <p
-            className="text-xs font-mono-custom tracking-widest uppercase mb-4"
-            style={{ color: "var(--gold-500)" }}
-          >
-            Work
-          </p>
-          <h1
-            className="font-display text-5xl md:text-6xl font-bold mb-4"
-            style={{ color: "rgba(255,255,255,0.92)" }}
-          >
-            Projects
-          </h1>
-          <p
-            className="text-base max-w-xl"
-            style={{ color: "rgba(255,255,255,0.4)" }}
-          >
-            AI systems, backend APIs, automation pipelines, and the occasional
-            frontend — things built to work, not just to look good.
-          </p>
-        </div>
+      <section className="container mx-auto max-w-7xl px-6 pb-24 md:pb-32" aria-label="Project case studies">
+        <div className="space-y-8">
+          {caseStudies.map((project, index) => (
+            <article key={project.slug} className="reveal grid overflow-hidden border border-white/10 bg-white/[0.015] lg:grid-cols-[0.92fr_1.08fr]">
+              <NavLink to={`/work/${project.slug}`} className="group relative block min-h-64 overflow-hidden border-b border-white/10 bg-[#121314] lg:min-h-[24rem] lg:border-b-0 lg:border-r" aria-label={`Open ${project.title} case study`}>
+                {project.image ? (
+                  <img src={project.image} alt={project.imageAlt ?? ""} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]" />
+                ) : (
+                  <div className="absolute inset-0 grid place-items-center bg-[#171819]"><Workflow size={46} strokeWidth={1} className="text-white/40" aria-hidden="true" /></div>
+                )}
+                <span className="absolute left-5 top-5 bg-black/75 px-3 py-1.5 text-[10px] font-mono-custom uppercase tracking-[0.14em] text-white/80">{project.discipline}</span>
+                <span className="absolute bottom-5 right-5 grid h-10 w-10 place-items-center border border-white/30 bg-black/50 text-white transition-colors group-hover:border-[var(--gold-300)] group-hover:text-[var(--gold-300)]"><ArrowUpRight size={17} /></span>
+              </NavLink>
 
-        {/* Filters */}
-        <div className="flex flex-wrap gap-2 mb-12 reveal">
-          {filters.map((f) => (
-            <button
-              key={f.value}
-              onClick={() => setActive(f.value)}
-              className="px-5 py-2 rounded-full text-sm font-medium transition-all duration-300"
-              style={
-                active === f.value
-                  ? {
-                      background: "var(--gradient-gold)",
-                      color: "#080808",
-                    }
-                  : {
-                      background: "transparent",
-                      border: "1px solid rgba(201,168,76,0.2)",
-                      color: "rgba(255,255,255,0.4)",
-                    }
-              }
-            >
-              {f.label}
-            </button>
+              <div className="flex flex-col p-6 md:p-9 lg:p-10">
+                <p className="eyebrow">Case study / 0{index + 1}</p>
+                <h2 className="mb-4 text-2xl font-semibold tracking-tight text-white md:text-3xl">{project.title}</h2>
+                <p className="mb-7 max-w-2xl text-sm leading-6 text-white/60">{project.summary}</p>
+                <div className="grid gap-5 border-t border-white/10 py-5 sm:grid-cols-2">
+                  <div>
+                    <h3 className="mb-2 text-[10px] font-mono-custom uppercase tracking-[0.17em] text-white/40">The problem</h3>
+                    <p className="text-sm leading-6 text-white/65">{project.problem}</p>
+                  </div>
+                  <div>
+                    <h3 className="mb-2 text-[10px] font-mono-custom uppercase tracking-[0.17em] text-white/40">The approach</h3>
+                    <p className="text-sm leading-6 text-white/65">{project.approach}</p>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2 border-t border-white/10 pt-5">
+                  {project.technologies.map((technology) => <span className="tag" key={technology}>{technology}</span>)}
+                </div>
+                <div className="mt-auto flex flex-wrap items-center gap-5 pt-7">
+                  <NavLink to={`/work/${project.slug}`} className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--gold-300)] hover:text-white">Read case study <ArrowRight size={15} /></NavLink>
+                  {project.demo && <a href={project.demo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-white">Demo <ArrowUpRight size={14} /></a>}
+                  {project.github && <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-white"><Github size={14} /> GitHub</a>}
+                </div>
+              </div>
+            </article>
           ))}
         </div>
-
-        {/* Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((project, i) => (
-            <div key={project.title} className={`reveal stagger-${(i % 5) + 1}`}>
-              <ProjectCard {...project} />
-            </div>
-          ))}
-        </div>
-
-      </div>
+      </section>
     </div>
   );
 }

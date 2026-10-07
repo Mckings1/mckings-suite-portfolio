@@ -1,49 +1,23 @@
+import { ArrowUpRight, GraduationCap, MapPin } from "lucide-react";
+import { NavLink } from "@/components/NavLink";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { WHATSAPP_URL } from "@/lib/brand";
 
-const stack = [
+const journey = [
   {
-    category: "AI & ML",
-    items: ["FastAPI", "LangChain", "OpenAI API", "Azure OpenAI", "Semantic Kernel", "RAG", "Scikit-learn", "XGBoost", "PyTorch", "TensorFlow"],
+    label: "Today",
+    title: "AI & Software Engineering",
+    text: "Building intelligent applications, backend systems and automation for practical business needs.",
   },
   {
-    category: "Backend",
-    items: ["Node.js", "Python", "FastAPI",  "REST APIs", "PostgreSQL", "MicrosoftSQLServer", "Docker", "Azure Functions"],
+    label: "Academic foundation",
+    title: "MSc Data & Information Science",
+    text: "University of Ibadan",
   },
   {
-    category: "Automation",
-    items: ["n8n", "ProcessMaker", "BPM", "Azure Logic Apps", "Pandas", "NumPy"],
-  },
-  {
-    category: "Frontend & Cloud",
-    items: ["JavaScript", "React", "TypeScript", "Tailwind CSS", "Azure", "Vercel", "Supabase", "Firebase"],
-  },
-];
-
-const timeline = [
-  {
-    year: "2025",
-    title: "Azure AI Certified",
-    body: "Earned Microsoft Azure AI Fundamentals (AI-900). Studied core Azure AI concepts — hybrid RAG architectures, LLM integrations on Azure OpenAI, and intelligent automation pipelines.",
-  },
-  {
-    year: "2024",
-    title: "Full AI Engineer pivot",
-    body: "Shifted primary focus to AI engineering. Built a privacy-first Hybrid RAG system, Azure AI hackathon platform with Semantic Kernel, and real-estate automation agents with n8n.",
-  },
-  {
-    year: "2024",
-    title: "IBM & Meta certified",
-    body: "Completed IBM Data Science Professional Certificate and Meta Front-End Developer certification. Completed applied projects across machine learning and front-end development.",
-  },
-  {
-    year: "2023",
-    title: "Backend & Automation",
-    body: "Moved beyond the browser — built Python automation scripts, BPM workflows for AccessBank on ProcessMaker, and data workflows for business processes.",
-  },
-  {
-    year: "2022",
-    title: "Started building",
-    body: "Began with JavaScript, React, and frontend fundamentals. Quickly realized the real work happens on the backend and in data — and chased that relentlessly.",
+    label: "Academic foundation",
+    title: "BTech Statistics",
+    text: "LAUTECH",
   },
 ];
 
@@ -51,177 +25,84 @@ export default function About() {
   useScrollReveal();
 
   return (
-    <div className="min-h-screen pt-24 pb-24 px-6">
-      <div className="container mx-auto max-w-5xl">
+    <div className="page-shell">
+      <header className="container mx-auto max-w-7xl px-6 pb-12 pt-32 md:pb-16 md:pt-40">
+        <p className="eyebrow">Profile / About McKings</p>
+        <h1 className="page-title">An engineer shaped by data, information and software.</h1>
+        <p className="section-lede mt-6">I work at the intersection of software engineering, AI, data and intelligent systems.</p>
+      </header>
 
-        {/* Header */}
-        <div className="mb-20 reveal">
-          <p
-            className="text-xs font-mono-custom tracking-widest uppercase mb-4"
-            style={{ color: "var(--gold-500)" }}
-          >
-            About
-          </p>
-          <h1
-            className="font-display text-5xl md:text-6xl font-bold mb-6"
-            style={{ color: "rgba(255,255,255,0.92)" }}
-          >
-            The story so far
-          </h1>
-          <div className="gold-line w-24" />
+      <section className="container mx-auto grid max-w-7xl gap-10 px-6 pb-20 md:grid-cols-[0.8fr_1.2fr] md:gap-16 md:pb-28">
+        <div className="reveal relative mx-auto w-full max-w-sm md:mx-0">
+          <div className="aspect-[4/5] overflow-hidden border border-white/10 bg-[#141414]">
+            <img src="/imgimg.jpg" alt="McKings, AI and Software Engineer" loading="lazy" className="h-full w-full object-cover object-[center_34%]" />
+          </div>
+          <div className="mt-4 flex items-center gap-2 text-xs font-mono-custom uppercase tracking-[0.16em] text-white/45"><MapPin size={14} className="text-[var(--gold-300)]" /> Lagos, Nigeria</div>
         </div>
 
-        {/* Bio */}
-        <div className="grid md:grid-cols-5 gap-12 mb-24">
-          <div className="md:col-span-3 reveal-left">
-            <div className="space-y-5">
-              <p className="text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>
-                I'm an AI Engineer and Backend Developer based in Lagos, Nigeria. I build software that connects language models and data to real workflows, with a focus on useful, maintainable systems.
-              </p>
-              <p className="text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>
-                My path began in frontend development and expanded into backend engineering, data science, AI, and automation. I am interested in how data moves through a product, how AI can answer from trusted sources, and where automation can simplify repetitive work. That path led me to Python, FastAPI, Azure, and document-grounded RAG systems.
-              </p>
-              <p className="text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>
-                I also build API services with Node.js and have experience with React. My portfolio includes AI, workflow automation, data visualization, and full-stack projects. I plan to pursue an MSc in Data Science and continue learning about AI and machine learning.
-              </p>
-            </div>
+        <div className="reveal">
+          <p className="eyebrow">The person behind the systems</p>
+          <div className="space-y-5 text-base leading-8 text-white/65">
+            <p>I am McKings, an AI & Software Engineer. My background in statistics and data and information science informs how I approach software: understand the information, model the problem, then engineer a system that can serve its users.</p>
+            <p>My work has grown from front-end and backend development into AI applications, retrieval-augmented generation, data projects and business process automation. I have built a document-grounded RAG platform, an Azure AI hackathon application and a funds-transfer workflow using ProcessMaker.</p>
+            <p>I am most interested in systems where software connects business processes, data and AI in a way that is understandable, useful and maintainable.</p>
           </div>
-
-          {/* Quick facts */}
-          <div className="md:col-span-2 reveal-right">
-            <div
-              className="rounded-2xl p-6 space-y-5"
-              style={{
-                background: "rgba(201,168,76,0.04)",
-                border: "1px solid rgba(201,168,76,0.15)",
-              }}
-            >
-              {[
-                { label: "Based in", value: "Lagos, Nigeria" },
-                { label: "Primary stack", value: "Node.js · FastAPI · Python" },
-                { label: "Focus", value: "AI Engineering" },
-                { label: "Experience", value: "Building since 2022" },
-                { label: "Education", value: "MSc Data Science (planned)" },
-                { label: "Open to", value: "Remote & on-site roles" },
-              ].map(({ label, value }) => (
-                <div key={label} className="flex justify-between items-start gap-4">
-                  <span
-                    className="text-xs font-mono-custom tracking-wide"
-                    style={{ color: "rgba(255,255,255,0.3)" }}
-                  >
-                    {label}
-                  </span>
-                  <span
-                    className="text-xs text-right font-medium"
-                    style={{ color: "rgba(255,255,255,0.7)" }}
-                  >
-                    {value}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[var(--gold-300)] transition-colors hover:text-white">Start a conversation <ArrowUpRight size={15} /></a>
         </div>
+      </section>
 
-        {/* Timeline */}
-        <div className="mb-24">
-          <div className="reveal mb-12">
-            <p
-              className="text-xs font-mono-custom tracking-widest uppercase mb-3"
-              style={{ color: "var(--gold-500)" }}
-            >
-              Journey
-            </p>
-            <h2
-              className="font-display text-3xl font-bold"
-              style={{ color: "rgba(255,255,255,0.9)" }}
-            >
-              How I got here
-            </h2>
+      <section className="border-y border-white/10 bg-white/[0.015]">
+        <div className="section-shell">
+          <div className="section-heading reveal">
+            <p className="eyebrow">Journey / 01</p>
+            <h2 className="section-title">From statistical thinking to intelligent systems</h2>
+            <p className="section-lede">A connected path through quantitative foundations, information and software engineering.</p>
           </div>
-
-          <div className="relative">
-            {/* Vertical line */}
-            <div
-              className="absolute left-[11px] top-2 bottom-2 w-px"
-              style={{ background: "linear-gradient(to bottom, var(--gold-400), transparent)" }}
-            />
-
-            <div className="space-y-10 pl-10">
-              {timeline.map((item, i) => (
-                <div key={item.year} className={`reveal stagger-${i + 1} relative`}>
-                  {/* Dot */}
-                  <div
-                    className="absolute -left-10 w-[10px] h-[10px] rounded-full mt-1.5"
-                    style={{
-                      background: "var(--gold-400)",
-                      boxShadow: "0 0 10px rgba(201,168,76,0.5)",
-                    }}
-                  />
-                  <span
-                    className="text-xs font-mono-custom tracking-widest"
-                    style={{ color: "var(--gold-500)" }}
-                  >
-                    {item.year}
-                  </span>
-                  <h3
-                    className="font-display text-lg font-semibold mt-1 mb-2"
-                    style={{ color: "rgba(255,255,255,0.85)" }}
-                  >
-                    {item.title}
-                  </h3>
-                  <p
-                    className="text-sm leading-relaxed"
-                    style={{ color: "rgba(255,255,255,0.45)" }}
-                  >
-                    {item.body}
-                  </p>
+          <ol className="border-l border-white/15">
+            {journey.map((item, index) => (
+              <li key={item.title} className="reveal relative grid gap-2 border-b border-white/10 py-7 pl-7 sm:grid-cols-[0.35fr_1fr] sm:gap-8 sm:pl-10">
+                <span className="absolute -left-[5px] top-9 h-2.5 w-2.5 rounded-full border border-[var(--gold-300)] bg-[#0b0c0d]" aria-hidden="true" />
+                <p className="text-xs font-mono-custom uppercase tracking-[0.15em] text-[var(--gold-300)]">{item.label} <span className="text-white/25">/ 0{index + 1}</span></p>
+                <div>
+                  <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-white/55">{item.text}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Stack */}
-        <div>
-          <div className="reveal mb-12">
-            <p
-              className="text-xs font-mono-custom tracking-widest uppercase mb-3"
-              style={{ color: "var(--gold-500)" }}
-            >
-              Toolkit
-            </p>
-            <h2
-              className="font-display text-3xl font-bold"
-              style={{ color: "rgba(255,255,255,0.9)" }}
-            >
-              Tech I work with
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {stack.map((group, i) => (
-              <div
-                key={group.category}
-                className={`glass-card rounded-2xl p-6 reveal stagger-${i + 1}`}
-              >
-                <p
-                  className="text-xs font-mono-custom tracking-widest uppercase mb-4"
-                  style={{ color: "var(--gold-500)" }}
-                >
-                  {group.category}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {group.items.map((item) => (
-                    <span key={item} className="tag">{item}</span>
-                  ))}
-                </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
+      </section>
 
-      </div>
+      <section className="section-shell">
+        <div className="section-heading reveal">
+          <p className="eyebrow">Technology / Selected tools</p>
+          <h2 className="section-title">Tools in service of the system</h2>
+          <p className="section-lede">A focused selection from the technologies used across the projects on this site.</p>
+        </div>
+        <div className="grid border-l border-t border-white/10 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            ["AI systems", "Azure OpenAI · Semantic Kernel · RAG · LLM APIs"],
+            ["Engineering", "Python · FastAPI · Node.js · React · REST APIs"],
+            ["Cloud", "Microsoft Azure · Azure Functions · Vercel"],
+            ["Data & automation", "SQL · Pandas · n8n · ProcessMaker"],
+          ].map(([title, items]) => (
+            <div key={title} className="reveal border-b border-r border-white/10 p-5 md:p-6">
+              <h3 className="mb-3 text-sm font-semibold text-white">{title}</h3>
+              <p className="text-sm leading-6 text-white/50">{items}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-shell pt-0">
+        <div className="flex flex-col gap-5 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between reveal">
+          <div>
+            <p className="eyebrow">Professional learning</p>
+            <h2 className="text-xl font-semibold text-white">Certifications & continuing study</h2>
+          </div>
+          <NavLink to="/certifications" className="inline-flex items-center gap-2 text-sm text-[var(--gold-300)] hover:text-white">View credentials <GraduationCap size={16} /></NavLink>
+        </div>
+      </section>
     </div>
   );
 }
