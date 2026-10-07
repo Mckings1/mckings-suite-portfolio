@@ -39,6 +39,36 @@
     --shadow-gold-strong: 0 8px 24px rgba(0, 0, 0, 0.3);
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  html.light {
+    color-scheme: light;
+    --background: 40 18% 96%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 42 64% 32%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 10% 91%;
+    --secondary-foreground: 0 0% 15%;
+    --muted: 40 10% 91%;
+    --muted-foreground: 0 0% 38%;
+    --accent: 40 10% 91%;
+    --accent-foreground: 0 0% 15%;
+    --border: 0 0% 84%;
+    --input: 0 0% 90%;
+    --ring: 42 64% 32%;
+    --gold-100: #33250d;
+    --gold-200: #49350f;
+    --gold-300: #604718;
+    --gold-400: #795a1d;
+    --gold-500: #624919;
+    --gold-600: #493510;
+    --gold-dim: rgba(121, 90, 29, 0.08);
+    --gold-glow: rgba(121, 90, 29, 0.12);
+    --gradient-gold: #795a1d;
+  }
 }
 
 @layer base {
@@ -232,6 +262,88 @@ button:focus-visible,
 summary:focus-visible {
   outline: 2px solid var(--gold-300);
   outline-offset: 4px;
+}
+
+html.light body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+html.light .text-white {
+  color: #171717 !important;
+}
+
+html.light [class~="!text-white"] {
+  color: #171717 !important;
+}
+
+html.light [class~="hover:text-white"]:hover,
+html.light [class~="group-hover:text-white"]:hover {
+  color: #171717 !important;
+}
+
+html.light [class*="text-white/"] {
+  color: rgba(23, 23, 23, 0.72) !important;
+}
+
+html.light [class*="text-white/20"] { color: rgba(23, 23, 23, 0.28) !important; }
+html.light [class*="text-white/25"] { color: rgba(23, 23, 23, 0.32) !important; }
+html.light [class*="text-white/30"] { color: rgba(23, 23, 23, 0.4) !important; }
+html.light [class*="text-white/35"] { color: rgba(23, 23, 23, 0.45) !important; }
+html.light [class*="text-white/40"] { color: rgba(23, 23, 23, 0.5) !important; }
+html.light [class*="text-white/45"] { color: rgba(23, 23, 23, 0.56) !important; }
+html.light [class*="text-white/50"] { color: rgba(23, 23, 23, 0.62) !important; }
+html.light [class*="text-white/55"] { color: rgba(23, 23, 23, 0.68) !important; }
+html.light [class*="text-white/60"] { color: rgba(23, 23, 23, 0.72) !important; }
+html.light [class*="text-white/65"] { color: rgba(23, 23, 23, 0.76) !important; }
+html.light [class*="text-white/70"] { color: rgba(23, 23, 23, 0.8) !important; }
+html.light [class*="text-white/75"] { color: rgba(23, 23, 23, 0.84) !important; }
+html.light [class*="text-white/80"] { color: rgba(23, 23, 23, 0.88) !important; }
+html.light [class*="text-white/90"] { color: rgba(23, 23, 23, 0.94) !important; }
+
+html.light [class*="border-white/"] {
+  border-color: rgba(23, 23, 23, 0.14) !important;
+}
+
+html.light [class*="bg-white/"] {
+  background-color: rgba(23, 23, 23, 0.035) !important;
+}
+
+html.light [class*="bg-[#"] {
+  background-color: #efeee9 !important;
+}
+
+html.light [class*="bg-black/"] {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+}
+
+html.light .hero-photo-caption {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+}
+
+html.light .outline-gold-btn {
+  border-color: rgba(23, 23, 23, 0.3);
+  color: #171717;
+}
+
+html.light .outline-gold-btn:hover {
+  border-color: rgba(23, 23, 23, 0.65);
+  background: rgba(23, 23, 23, 0.04);
+}
+
+html.light .gold-btn {
+  color: #fff;
+}
+
+html.light .tag {
+  background-color: rgba(23, 23, 23, 0.035);
+  border-color: rgba(23, 23, 23, 0.13);
+  color: rgba(23, 23, 23, 0.7);
+}
+
+html.light ::selection {
+  background: rgba(121, 90, 29, 0.18);
+  color: #171717;
 }
 
 @media (prefers-reduced-motion: reduce) {

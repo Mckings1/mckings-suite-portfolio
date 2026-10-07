@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { WHATSAPP_URL } from "@/lib/brand";
 
 const navLinks = [
@@ -36,6 +37,7 @@ export function Navbar() {
               {link.label}
             </NavLink>
           ))}
+          <ThemeToggle />
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="gold-btn inline-flex min-h-10 items-center gap-2 rounded-full px-4 text-xs">Let&apos;s connect <ArrowUpRight size={14} /></a>
         </div>
 
@@ -51,6 +53,10 @@ export function Navbar() {
               {link.label}
             </NavLink>
           ))}
+          <div className="flex items-center justify-between border-b border-white/[0.07] py-3.5 text-sm text-white/65">
+            <span>Appearance</span>
+            <ThemeToggle tabIndex={isOpen ? 0 : -1} />
+          </div>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} tabIndex={isOpen ? 0 : -1} className="gold-btn mt-4 inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 text-sm">Let&apos;s connect <ArrowUpRight size={14} /></a>
         </nav>
       </div>

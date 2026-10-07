@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import Home from "@/pages/Home";
 import Projects from "@/pages/Projects";
 import Certifications from "@/pages/Certifications";
@@ -54,30 +55,32 @@ function ScrollToTop() {
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <div className="min-h-screen flex flex-col grain">
-          <Navbar />
-          <main className="flex-1">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/work" element={<Projects />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/work/:slug" element={<CaseStudy />} />
-              <Route path="/certifications" element={<Certifications />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/research" element={<Research />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </main>
-          <Footer />
-          <Analytics />
-        </div>
-      </BrowserRouter>
-    </TooltipProvider>
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} storageKey="mckings-theme">
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <ScrollToTop />
+          <div className="min-h-screen flex flex-col grain">
+            <Navbar />
+            <main className="flex-1">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/work" element={<Projects />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/work/:slug" element={<CaseStudy />} />
+                <Route path="/certifications" element={<Certifications />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/research" element={<Research />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+            <Footer />
+            <Analytics />
+          </div>
+        </BrowserRouter>
+      </TooltipProvider>
+    </ThemeProvider>
   </QueryClientProvider>
 );
 

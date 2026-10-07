@@ -92,7 +92,7 @@ export default function Home() {
             <div className="absolute -inset-4 -z-10 rounded-[2rem] border border-white/10" />
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10 bg-[#141414]">
               <img src="/imgimg.jpg" alt="McKings, AI and Software Engineer" fetchPriority="high" className="h-full w-full object-cover object-[center_34%]" />
-              <div className="absolute inset-x-0 bottom-0 bg-black/75 p-5">
+              <div className="hero-photo-caption absolute inset-x-0 bottom-0 bg-black/75 p-5">
                 <p className="text-xs font-mono-custom uppercase tracking-[0.18em] text-white/60">Engineering intelligent systems</p>
               </div>
             </div>
