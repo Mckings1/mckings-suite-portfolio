@@ -59,7 +59,7 @@ const projects = [
   {
     title: "IBM Data Science Capstone",
     description:
-      "End-to-end SpaceX launch analysis using API data and web scraping to forecast successful launches, with 95% accurate predictive modelling.",
+      "End-to-end SpaceX launch analysis using API data and web scraping to forecast successful launches, with a predictive model reported at 95% accuracy in the project.",
     tags: ["Python", "SQL", "Scikit-learn", "Folium", "Plotly Dash"],
     category: "ml",
     githubUrl: "https://github.com/Mckings1/IBM-DataScience-Capstone-Project",

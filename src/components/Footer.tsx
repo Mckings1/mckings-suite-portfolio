@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, MessageCircle } from "lucide-react";
 
 export function Footer() {
   const socials = [
@@ -21,6 +21,11 @@ export function Footer() {
       icon: Mail,
       label: "Email",
       href: "mailto:alabioluwasegun8@gmail.com",
+    },
+    {
+      icon: MessageCircle,
+      label: "WhatsApp",
+      href: "https://wa.me/2348107087430",
     },
   ];
 
@@ -56,8 +61,8 @@ export function Footer() {
               <a
                 key={label}
                 href={href}
-                target={href.startsWith("mailto") ? undefined : "_blank"}
-                rel="noopener noreferrer"
+              target={href.startsWith("mailto") ? undefined : "_blank"}
+              rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
                 aria-label={label}
                 className="group p-2 rounded-full transition-all duration-300"
                 style={{

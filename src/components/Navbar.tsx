@@ -2,6 +2,8 @@ import { NavLink } from "@/components/NavLink";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
+const whatsappUrl = "https://wa.me/2348107087430?text=Hi%20McKings%2C%20I%27d%20like%20to%20discuss%20a%20project.";
+
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -72,10 +74,12 @@ export function Navbar() {
             ))}
 
             <a
-              href="mailto:alabioluwasegun8@gmail.com"
-              className="gold-btn px-5 py-2 rounded-full text-sm"
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="gold-btn px-5 py-2.5 rounded-full text-sm"
             >
-              Hire Me
+              WhatsApp me
             </a>
           </div>
 
@@ -117,11 +121,13 @@ export function Navbar() {
               </NavLink>
             ))}
             <a
-              href="mailto:alabioluwasegun8@gmail.com"
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
               className="mt-2 gold-btn px-5 py-3 rounded-full text-sm text-center"
             >
-              Hire Me
+              WhatsApp me
             </a>
           </div>
         </div>

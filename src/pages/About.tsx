@@ -23,7 +23,7 @@ const timeline = [
   {
     year: "2025",
     title: "Azure AI Certified",
-    body: "Earned Microsoft Azure AI Fundamentals (AI-900). Deep-dived into production AI systems — hybrid RAG architectures, LLM integrations on Azure OpenAI, and intelligent automation pipelines.",
+    body: "Earned Microsoft Azure AI Fundamentals (AI-900). Studied core Azure AI concepts — hybrid RAG architectures, LLM integrations on Azure OpenAI, and intelligent automation pipelines.",
   },
   {
     year: "2024",
@@ -33,12 +33,12 @@ const timeline = [
   {
     year: "2024",
     title: "IBM & Meta certified",
-    body: "Completed IBM Data Science Professional Certificate and Meta Front-End Developer certification. Shipped end-to-end ML pipelines and production React apps.",
+    body: "Completed IBM Data Science Professional Certificate and Meta Front-End Developer certification. Completed applied projects across machine learning and front-end development.",
   },
   {
     year: "2023",
     title: "Backend & Automation",
-    body: "Moved beyond the browser — built Python automation scripts, BPM workflows for AccessBank on ProcessMaker, and data pipelines that actually moved the needle.",
+    body: "Moved beyond the browser — built Python automation scripts, BPM workflows for AccessBank on ProcessMaker, and data workflows for business processes.",
   },
   {
     year: "2022",
@@ -76,21 +76,13 @@ export default function About() {
           <div className="md:col-span-3 reveal-left">
             <div className="space-y-5">
               <p className="text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>
-                I'm an AI Engineer and Backend Developer based in Lagos. My work lives at the intersection
-                of intelligent systems and real engineering — building things that don't just demo well,
-                but hold up in production.
+                I'm an AI Engineer and Backend Developer based in Lagos, Nigeria. I build software that connects language models and data to real workflows, with a focus on useful, maintainable systems.
               </p>
               <p className="text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>
-                I started with frontend development, but the deeper pull was always toward
-                systems thinking — how data moves, how models reason, how automation eliminates
-                the repetitive so humans can focus on the meaningful. That led me to FastAPI,
-                Python, and eventually to building hybrid RAG systems and LLM-powered backends
-                on Azure.
+                My path began in frontend development and expanded into backend engineering, data science, AI, and automation. I am interested in how data moves through a product, how AI can answer from trusted sources, and where automation can simplify repetitive work. That path led me to Python, FastAPI, Azure, and document-grounded RAG systems.
               </p>
               <p className="text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>
-                I also work with Node.js for API services, and I can build the frontend when needed —
-                but AI and backend engineering is where I operate at my highest level.
-                MSc in Data Science is next. PhD in AI/ML is the horizon.
+                I also build API services with Node.js and have experience with React. My portfolio includes AI, workflow automation, data visualization, and full-stack projects. I plan to pursue an MSc in Data Science and continue learning about AI and machine learning.
               </p>
             </div>
           </div>
@@ -108,8 +100,8 @@ export default function About() {
                 { label: "Based in", value: "Lagos, Nigeria" },
                 { label: "Primary stack", value: "Node.js · FastAPI · Python" },
                 { label: "Focus", value: "AI Engineering" },
-                { label: "Experience", value: "4+ years" },
-                { label: "Education", value: "MSc Data Science (upcoming)" },
+                { label: "Experience", value: "Building since 2022" },
+                { label: "Education", value: "MSc Data Science (planned)" },
                 { label: "Open to", value: "Remote & on-site roles" },
               ].map(({ label, value }) => (
                 <div key={label} className="flex justify-between items-start gap-4">
