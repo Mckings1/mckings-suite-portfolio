@@ -31,31 +31,30 @@ export default function CaseStudy() {
       <div className="container mx-auto grid max-w-7xl gap-14 px-6 pb-24 md:grid-cols-[minmax(0,1fr)_18rem] md:gap-20 md:pb-32">
         <div className="space-y-14">
           <section className="reveal">
-            <p className="eyebrow">01 / Overview</p>
+            <p className="eyebrow">Overview</p>
             <p className="max-w-3xl text-lg leading-8 text-white/70">{project.summary} {project.approach}</p>
           </section>
 
           <section className="reveal">
-            <p className="eyebrow">02 / The problem</p>
+            <p className="eyebrow">The problem</p>
             <h2 className="mb-4 text-2xl font-semibold text-white">What needed to work better</h2>
             <p className="max-w-3xl leading-7 text-white/60">{project.problem}</p>
           </section>
 
           <section className="reveal">
-            <p className="eyebrow">03 / The approach</p>
+            <p className="eyebrow">The approach</p>
             <h2 className="mb-4 text-2xl font-semibold text-white">System design around the task</h2>
             <p className="max-w-3xl leading-7 text-white/60">{project.approach}</p>
           </section>
 
           <section className="reveal" aria-labelledby="architecture-heading">
-            <p className="eyebrow">04 / Architecture</p>
+            <p className="eyebrow">Architecture</p>
             <h2 id="architecture-heading" className="mb-6 text-2xl font-semibold text-white">A clear path through the system</h2>
             <ol className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-              {project.architecture.map((step, index) => (
+              {project.architecture.map((step) => (
                 <li key={step} className="relative flex min-h-28 items-start gap-4 border border-white/10 bg-white/[0.02] p-5">
-                  <span className="text-xs font-mono-custom text-[var(--gold-300)]">0{index + 1}</span>
                   <span className="text-sm leading-6 text-white/75">{step}</span>
-                  {index < project.architecture.length - 1 && <ArrowRight size={13} className="absolute -right-2 top-1/2 z-10 hidden -translate-y-1/2 bg-[#0b0c0d] text-[var(--gold-300)] lg:block" aria-hidden="true" />}
+                  {step !== project.architecture.at(-1) && <ArrowRight size={13} className="absolute -right-2 top-1/2 z-10 hidden -translate-y-1/2 bg-[#0b0c0d] text-[var(--gold-300)] lg:block" aria-hidden="true" />}
                 </li>
               ))}
             </ol>
@@ -63,14 +62,14 @@ export default function CaseStudy() {
           </section>
 
           <section className="reveal">
-            <p className="eyebrow">05 / Engineering decisions</p>
+            <p className="eyebrow">Engineering decisions</p>
             <ul className="space-y-3">
               {project.decisions.map((decision) => <li key={decision} className="flex gap-3 border-b border-white/10 py-4 text-sm leading-6 text-white/65"><span className="mt-2 h-1.5 w-1.5 shrink-0 bg-[var(--gold-300)]" />{decision}</li>)}
             </ul>
           </section>
 
           <section className="reveal">
-            <p className="eyebrow">06 / Outcome</p>
+            <p className="eyebrow">Outcome</p>
             <p className="max-w-3xl text-lg leading-8 text-white/70">{project.outcome}</p>
           </section>
 

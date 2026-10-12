@@ -15,8 +15,8 @@ export function Footer() {
       <div className="container mx-auto grid max-w-7xl gap-10 px-6 py-10 sm:grid-cols-2 sm:items-end">
         <div>
           <NavLink to="/" className="inline-flex items-center" aria-label="McKings home">
-            <span className="flex h-16 w-28 items-center justify-center overflow-hidden" aria-hidden="true">
-              <img src="/logo.png" alt="" loading="lazy" className="h-28 w-28 max-w-none object-contain mix-blend-screen" />
+            <span className="brand-mark flex h-16 w-28 items-center justify-center overflow-hidden" aria-hidden="true">
+              <img src="/logo.png" alt="" loading="lazy" className="h-28 w-28 max-w-none object-contain" />
             </span>
           </NavLink>
           <p className="mt-2 text-xs text-white/40">AI & Software Engineer · Lagos, Nigeria</p>

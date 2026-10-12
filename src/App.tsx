@@ -55,7 +55,7 @@ function ScrollToTop() {
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} storageKey="mckings-theme">
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} storageKey="mckings-theme">
       <TooltipProvider>
         <Toaster />
         <Sonner />

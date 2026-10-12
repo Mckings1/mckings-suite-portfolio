@@ -26,7 +26,7 @@ export default function Research() {
             <p className="text-sm leading-6 text-white/50">A working research question, not a published paper.</p>
           </div>
           <div className="reveal">
-            <h2 className="max-w-4xl font-display text-3xl font-semibold leading-tight text-white md:text-5xl">A Statistical Framework for Detecting and Mitigating Knowledge Drift in Automated Retrieval-Augmented Generation Systems</h2>
+            <h2 className="max-w-4xl font-display text-3xl font-semibold leading-tight text-white md:text-5xl">A Statistical Framework for Detecting and Mitigating Knowledge Drift in Retrieval-Augmented Generation Systems</h2>
             <p className="mt-7 max-w-3xl leading-7 text-white/60">This direction asks how changes in source knowledge can affect retrieval-augmented generation, and how statistical methods might help detect and respond to those changes. It connects my statistics background with my engineering work on RAG applications.</p>
           </div>
         </div>
@@ -39,9 +39,9 @@ export default function Research() {
             <h2 className="section-title">Questions worth investigating</h2>
           </div>
           <div className="grid border-l border-t border-white/10 sm:grid-cols-2 lg:grid-cols-4">
-            {interests.map(({ icon: Icon, title, text }, index) => (
+            {interests.map(({ icon: Icon, title, text }) => (
               <article key={title} className="reveal border-b border-r border-white/10 p-6">
-                <div className="mb-7 flex items-center justify-between"><span className="text-xs font-mono-custom text-[var(--gold-300)]">0{index + 1}</span><Icon size={18} className="text-white/50" strokeWidth={1.5} /></div>
+                <div className="mb-7 flex justify-end"><Icon size={18} className="text-white/50" strokeWidth={1.5} /></div>
                 <h3 className="mb-3 font-semibold text-white">{title}</h3>
                 <p className="text-sm leading-6 text-white/55">{text}</p>
               </article>

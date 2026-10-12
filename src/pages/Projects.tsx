@@ -24,12 +24,12 @@ export default function Projects() {
                 ) : (
                   <div className="absolute inset-0 grid place-items-center bg-[#171819]"><Workflow size={46} strokeWidth={1} className="text-white/40" aria-hidden="true" /></div>
                 )}
-                <span className="absolute left-5 top-5 bg-black/75 px-3 py-1.5 text-[10px] font-mono-custom uppercase tracking-[0.14em] text-white/80">{project.discipline}</span>
-                <span className="absolute bottom-5 right-5 grid h-10 w-10 place-items-center border border-white/30 bg-black/50 text-white transition-colors group-hover:border-[var(--gold-300)] group-hover:text-[var(--gold-300)]"><ArrowUpRight size={17} /></span>
+                <span className="media-overlay absolute left-5 top-5 bg-black/75 px-3 py-1.5 text-[10px] font-mono-custom uppercase tracking-[0.14em] text-white/80">{project.discipline}</span>
+                <span className="media-overlay absolute bottom-5 right-5 grid h-10 w-10 place-items-center border border-white/30 bg-black/50 text-white transition-colors group-hover:border-[var(--gold-300)] group-hover:text-[var(--gold-300)]"><ArrowUpRight size={17} /></span>
               </NavLink>
 
               <div className="flex flex-col p-6 md:p-9 lg:p-10">
-                <p className="eyebrow">Case study / 0{index + 1}</p>
+                <p className="eyebrow">Case study</p>
                 <h2 className="mb-4 text-2xl font-semibold tracking-tight text-white md:text-3xl">{project.title}</h2>
                 <p className="mb-7 max-w-2xl text-sm leading-6 text-white/60">{project.summary}</p>
                 <div className="grid gap-5 border-t border-white/10 py-5 sm:grid-cols-2">

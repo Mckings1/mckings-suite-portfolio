@@ -22,11 +22,11 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 border-b transition-colors duration-300 ${scrolled || isOpen ? "border-white/10 bg-[#0b0c0d]/95 backdrop-blur-xl" : "border-transparent bg-[#0b0c0d]/60 backdrop-blur-sm"}`}>
+    <header className={`site-header fixed inset-x-0 top-0 z-50 border-b transition-colors duration-300 ${scrolled || isOpen ? "border-white/10 bg-[#0b0c0d]/95 backdrop-blur-xl" : "border-transparent bg-[#0b0c0d]/60 backdrop-blur-sm"}`}>
       <nav className="container mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between px-6" aria-label="Main navigation">
         <NavLink to="/" className="group inline-flex items-center gap-3" aria-label="McKings home">
-          <span className="flex h-14 w-24 items-center justify-center overflow-hidden" aria-hidden="true">
-            <img src="/logo.png" alt="" className="h-24 w-24 max-w-none object-contain mix-blend-screen" />
+          <span className="brand-mark flex h-14 w-24 items-center justify-center overflow-hidden" aria-hidden="true">
+            <img src="/logo.png" alt="" className="h-24 w-24 max-w-none object-contain" />
           </span>
           <span className="hidden border-l border-white/20 pl-3 text-[10px] font-mono-custom uppercase tracking-[0.15em] text-white/40 sm:inline">AI & Software Engineer</span>
         </NavLink>

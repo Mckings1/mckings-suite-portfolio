@@ -1,4 +1,4 @@
-import { ArrowUpRight, GraduationCap, MapPin } from "lucide-react";
+import { ArrowUpRight, BrainCircuit, Cloud, Code2, Database, GraduationCap, MapPin } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { WHATSAPP_URL } from "@/lib/brand";
@@ -19,6 +19,13 @@ const journey = [
     title: "BTech Statistics",
     text: "LAUTECH",
   },
+];
+
+const tools = [
+  { title: "AI systems", icon: BrainCircuit, items: ["Azure OpenAI", "Semantic Kernel", "RAG", "LLM APIs"] },
+  { title: "Engineering", icon: Code2, items: ["Python", "FastAPI", "Node.js", "React", "REST APIs"] },
+  { title: "Cloud", icon: Cloud, items: ["Microsoft Azure", "Azure Functions", "Vercel"] },
+  { title: "Data & automation", icon: Database, items: ["SQL", "Pandas", "n8n", "ProcessMaker"] },
 ];
 
 export default function About() {
@@ -54,15 +61,15 @@ export default function About() {
       <section className="border-y border-white/10 bg-white/[0.015]">
         <div className="section-shell">
           <div className="section-heading reveal">
-            <p className="eyebrow">Journey / 01</p>
+            <p className="eyebrow">Journey</p>
             <h2 className="section-title">From statistical thinking to intelligent systems</h2>
             <p className="section-lede">A connected path through quantitative foundations, information and software engineering.</p>
           </div>
           <ol className="border-l border-white/15">
-            {journey.map((item, index) => (
+            {journey.map((item) => (
               <li key={item.title} className="reveal relative grid gap-2 border-b border-white/10 py-7 pl-7 sm:grid-cols-[0.35fr_1fr] sm:gap-8 sm:pl-10">
                 <span className="absolute -left-[5px] top-9 h-2.5 w-2.5 rounded-full border border-[var(--gold-300)] bg-[#0b0c0d]" aria-hidden="true" />
-                <p className="text-xs font-mono-custom uppercase tracking-[0.15em] text-[var(--gold-300)]">{item.label} <span className="text-white/25">/ 0{index + 1}</span></p>
+                <p className="text-xs font-mono-custom uppercase tracking-[0.15em] text-[var(--gold-300)]">{item.label}</p>
                 <div>
                   <h3 className="text-lg font-semibold text-white">{item.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-white/55">{item.text}</p>
@@ -79,17 +86,19 @@ export default function About() {
           <h2 className="section-title">Tools in service of the system</h2>
           <p className="section-lede">A focused selection from the technologies used across the projects on this site.</p>
         </div>
-        <div className="grid border-l border-t border-white/10 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            ["AI systems", "Azure OpenAI · Semantic Kernel · RAG · LLM APIs"],
-            ["Engineering", "Python · FastAPI · Node.js · React · REST APIs"],
-            ["Cloud", "Microsoft Azure · Azure Functions · Vercel"],
-            ["Data & automation", "SQL · Pandas · n8n · ProcessMaker"],
-          ].map(([title, items]) => (
-            <div key={title} className="reveal border-b border-r border-white/10 p-5 md:p-6">
-              <h3 className="mb-3 text-sm font-semibold text-white">{title}</h3>
-              <p className="text-sm leading-6 text-white/50">{items}</p>
-            </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {tools.map(({ title, icon: Icon, items }) => (
+            <article key={title} className="home-card reveal rounded-2xl p-5 md:p-6">
+              <div className="mb-6 flex items-center gap-3">
+                <span className="grid h-10 w-10 place-items-center rounded-xl bg-[var(--gold-dim)] text-[var(--gold-300)]">
+                  <Icon size={19} strokeWidth={1.6} aria-hidden="true" />
+                </span>
+                <h3 className="text-sm font-semibold text-foreground">{title}</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {items.map((item) => <span key={item} className="tag">{item}</span>)}
+              </div>
+            </article>
           ))}
         </div>
       </section>

@@ -22,9 +22,8 @@ export default function Certifications() {
       </header>
       <section className="container mx-auto max-w-5xl px-6 pb-24 md:pb-32" aria-label="Professional certifications">
         <div className="divide-y divide-white/10 border-y border-white/10">
-          {certifications.map((cert, index) => (
-            <article key={cert.title} className="reveal grid gap-4 py-6 sm:grid-cols-[4rem_1fr_auto] sm:items-center sm:gap-7">
-              <span className="text-xs font-mono-custom text-[var(--gold-300)]">0{index + 1}</span>
+          {certifications.map((cert) => (
+            <article key={cert.title} className="reveal grid gap-4 py-6 sm:grid-cols-[1fr_auto] sm:items-center sm:gap-7">
               <div className="flex items-start gap-4">
                 <Award size={18} strokeWidth={1.5} className="mt-1 shrink-0 text-white/45" aria-hidden="true" />
                 <div><h2 className="font-medium leading-6 text-white">{cert.title}</h2><p className="mt-1 text-xs text-white/45">{cert.issuer}</p></div>
