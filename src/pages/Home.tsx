@@ -42,9 +42,9 @@ const projects = [
     title: "Local Funds Transfer Workflow",
     category: "Financial services · Automation",
     summary: "A banking workflow connecting transfer routing, approvals and email notifications.",
-    role: "Built for GTBank using ProcessMaker",
-    image: null,
-    imageAlt: "",
+    role: "Built for Access Bank using ProcessMaker",
+    image: "/processmaker.png",
+    imageAlt: "ProcessMaker workflow designer interface showing a workflow model",
     tags: ["ProcessMaker", "BPM", "Workflow design"],
     caseStudy: "/work/financial-services-workflow",
     live: "",
@@ -62,10 +62,10 @@ const process = [
 ];
 
 const perspective = [
-  { title: "Statistics", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85", alt: "Colorful analytics charts on a computer display" },
-  { title: "Information science", image: "https://images.unsplash.com/photo-1527908290749-8c9518e0db09?auto=format&fit=crop&w=900&q=85", alt: "Warm library shelves representing research and knowledge" },
-  { title: "Software engineering", image: "https://images.unsplash.com/photo-1575089976121-8ed7b2a54265?auto=format&fit=crop&w=900&q=85", alt: "Software developer working at a multi-monitor desk" },
-  { title: "AI systems", image: "https://images.unsplash.com/photo-1644088379091-d574269d422f?auto=format&fit=crop&w=900&q=85", alt: "Blue network visualization representing connected AI systems" },
+  { title: "Statistics", image: "/statistics.png", alt: "Colorful analytics charts on a computer display" },
+  { title: "Information science", image: "/Information.png", alt: "Warm library shelves representing research and knowledge" },
+  { title: "Software engineering", image: "/Software.png", alt: "Software developer working at a multi-monitor desk" },
+  { title: "AI systems", image: "/AIsystems.png", alt: "Blue network visualization representing connected AI systems" },
 ];
 
 export default function Home() {
@@ -108,7 +108,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-shell" aria-labelledby="purpose-heading">
+      <section className="section-shell border-t border-border" aria-labelledby="purpose-heading">
         <div className="section-heading reveal">
           <p className="eyebrow">What I do</p>
           <h2 id="purpose-heading" className="section-title">Engineering with purpose</h2>
@@ -129,7 +129,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-shell" aria-labelledby="selected-work-heading">
+      <section className="section-shell border-t border-border" aria-labelledby="selected-work-heading">
         <div className="mb-10 flex flex-col gap-5 md:flex-row md:items-end md:justify-between reveal">
           <div className="section-heading mb-0">
             <p className="eyebrow">Selected work</p>
@@ -164,7 +164,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-shell" aria-labelledby="journey-heading">
+
+      <section className="section-shell border-t border-border" aria-labelledby="journey-heading">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="section-heading reveal">
             <p className="eyebrow">Perspective</p>
@@ -185,7 +186,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="process-section" aria-labelledby="process-heading">
+      <section className="process-section border-t border-border" aria-labelledby="process-heading">
         <div className="section-shell">
         <div className="section-heading reveal">
           <p className="eyebrow">How I work</p>
@@ -206,7 +207,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-shell" aria-labelledby="research-heading">
+      <section className="section-shell border-t border-border" aria-labelledby="research-heading">
         <div className="research-panel reveal grid items-center gap-8 rounded-3xl border border-border bg-card p-6 sm:p-9 md:grid-cols-[1.1fr_0.9fr] md:p-12">
           <div className="relative">
             <p className="eyebrow">Research direction</p>
@@ -221,7 +222,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-shell pt-0" id="contact" aria-labelledby="contact-heading">
+      <section className="section-shell border-t border-border pt-0" id="contact" aria-labelledby="contact-heading">
         <div className="flex flex-col gap-8 border-t border-white/10 py-12 md:flex-row md:items-end md:justify-between reveal">
           <div>
             <p className="eyebrow">Start a conversation</p>

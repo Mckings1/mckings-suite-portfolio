@@ -3,18 +3,18 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import Home from "@/pages/Home";
-import Projects from "@/pages/Projects";
-import Certifications from "@/pages/Certifications";
-import About from "@/pages/About";
-import Research from "@/pages/Research";
-import CaseStudy from "@/pages/CaseStudy";
-import NotFound from "@/pages/NotFound";
+const Home = lazy(() => import("@/pages/Home"));
+const Projects = lazy(() => import("@/pages/Projects"));
+const Certifications = lazy(() => import("@/pages/Certifications"));
+const About = lazy(() => import("@/pages/About"));
+const Research = lazy(() => import("@/pages/Research"));
+const CaseStudy = lazy(() => import("@/pages/CaseStudy"));
+const NotFound = lazy(() => import("@/pages/NotFound"));
 import { SITE_URL } from "@/lib/brand";
 import { caseStudies } from "@/data/caseStudies";
 import { Analytics } from '@vercel/analytics/react';
@@ -64,16 +64,18 @@ const App = () => (
           <div className="min-h-screen flex flex-col grain">
             <Navbar />
             <main className="flex-1">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/work" element={<Projects />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/work/:slug" element={<CaseStudy />} />
-                <Route path="/certifications" element={<Certifications />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/research" element={<Research />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
+              <Suspense fallback={<div className="container mx-auto min-h-[60vh] max-w-7xl px-6 py-32" aria-label="Loading page"><div className="h-8 w-48 animate-pulse rounded bg-secondary" /><div className="mt-6 h-4 max-w-xl animate-pulse rounded bg-secondary" /></div>}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/work" element={<Projects />} />
+                  <Route path="/projects" element={<Projects />} />
+                  <Route path="/work/:slug" element={<CaseStudy />} />
+                  <Route path="/certifications" element={<Certifications />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/research" element={<Research />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Suspense>
             </main>
             <Footer />
             <Analytics />

@@ -66,7 +66,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "financial-services-workflow",
     title: "Local Funds Transfer Workflow",
     discipline: "Financial services · Business process automation",
-    summary: "A ProcessMaker workflow for local funds transfer, built for GTBank.",
+    summary: "A ProcessMaker workflow for local funds transfer, built for Access Bank.",
     problem: "A local funds transfer process needed coordinated routing, approval and email notification steps.",
     approach: "Implemented a BPM workflow in ProcessMaker to connect the transfer routing, approval process and notifications.",
     role: "Workflow implementation",
@@ -77,7 +77,7 @@ export const caseStudies: CaseStudy[] = [
       "Include routing and approvals in the process flow.",
       "Use notifications to communicate workflow events.",
     ],
-    outcome: "The portfolio documents a funds-transfer BPM workflow built for GTBank. No transaction volumes or business impact metrics are published.",
+    outcome: "The portfolio documents a funds-transfer BPM workflow built for Access Bank. No transaction volumes or business impact metrics are published.",
     reflection: "In financial workflows, making routing and approvals explicit helps turn an operational process into a system that can be understood and maintained.",
   },
   {
